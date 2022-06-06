@@ -1,88 +1,93 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <script>
-        var CountDownDate = new Date("Mar 15, 2050 12:00:00").getTime();
 
-var countdownfunction = setInterval(function() {
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+    var CountDownDate = new Date("Mar 15, 2050 12:00:00").getTime();
 
-    var TimeNow = new Date().getTime();
-    var distance = CountDownDate - TimeNow;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var countdownfunction = setInterval(function () {
 
-    document.getElementById("c_days").innerHTML = days + "<br> Days";
-    document.getElementById("c_hours").innerHTML = hours + "<br> Hours";
-    document.getElementById("c_minutes").innerHTML = minutes + "<br> Minutes";
-    document.getElementById("c_seconds").innerHTML = seconds + "<br> Seconds";
+        var TimeNow = new Date().getTime();
+        var distance = CountDownDate - TimeNow;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_days").innerHTML = "0 <br> Days";
-    }
+        document.getElementById("c_days").innerHTML = days + "<br> Days";
+        document.getElementById("c_hours").innerHTML = hours + "<br> Hours";
+        document.getElementById("c_minutes").innerHTML = minutes + "<br> Minutes";
+        document.getElementById("c_seconds").innerHTML = seconds + "<br> Seconds";
 
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_hours").innerHTML = "0 <br> Hours";
-    }
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("c_days").innerHTML = "0 <br> Days";
+        }
 
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_minutes").innerHTML = "0 <br> Minutes";
-    }
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("c_hours").innerHTML = "0 <br> Hours";
+        }
 
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_seconds").innerHTML = "0 <br> Seconds";
-    }
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("c_minutes").innerHTML = "0 <br> Minutes";
+        }
 
-}, 1000);
-    </script>
-    <body style="height: 100vh; overflow:hidden">
-        <ul class="squares">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <div id="middle">
-            <h1 style="text-align: center;">Coming Soon...</h1>
-            <div id="countdown-container">
-                <div class="countdown-box">
-               		<p id="c_days">0 <br> Days</p>
-               	</div> <!-- /.countdown-box -->
-               	<div class="countdown-box">
-               		<p id="c_hours">0 <br> Hours</p>
-               	</div> <!-- /.countdown-box -->
-               	<div class="countdown-box">
-               		<p id="c_minutes">0 <br> Minutes</p>
-               	</div> <!-- /.countdown-box -->
-               	<div class="countdown-box">
-               		<p id="c_seconds">0 <br> Seconds</p>
-               	</div> <!-- /.countdown-box -->
-            </div> <!-- /#countdown-container -->
-            <h3>
-                <i class="far fa-copyright" style="margin-right: 0.15em; margin-left:0;"></i> Designed by | kazimhusaini | 2022
-            </h3>
-            <br>
-            <a href="https://twitter.com/ahbakri97" target="_blank">
-                <i id="twitter" class="fab fa-twitter"></i>
-            </a>
-            <a href="https://dribbble.com/AHBakri" target="_blank">
-                <i id="dribbble" class="fab fa-dribbble"></i>
-            </a>
-            <a href="https://codepen.io/AHBakri" target="_blank">
-                <i id="codepen" class="fab fa-codepen"></i>
-            </a>
-        </div><!-- /#middle -->
-    </body>
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("c_seconds").innerHTML = "0 <br> Seconds";
+        }
+
+    }, 1000);
+</script>
+
+<body style="height: 100vh; overflow:hidden">
+    <ul class="squares">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div id="middle">
+        <h1 style="text-align: center;">Coming Soon... </h1>
+        <h4><a href="privacy.html" style="text-decoration: underline; " >Privacy Policy</a></h4>
+        <div id="countdown-container">
+            <div class="countdown-box">
+                <p id="c_days">0 <br> Days</p>
+            </div> <!-- /.countdown-box -->
+            <div class="countdown-box">
+                <p id="c_hours">0 <br> Hours</p>
+            </div> <!-- /.countdown-box -->
+            <div class="countdown-box">
+                <p id="c_minutes">0 <br> Minutes</p>
+            </div> <!-- /.countdown-box -->
+            <div class="countdown-box">
+                <p id="c_seconds">0 <br> Seconds</p>
+            </div> <!-- /.countdown-box -->
+        </div> <!-- /#countdown-container -->
+        <h3>
+            <i class="far fa-copyright" style="margin-right: 0.15em; margin-left:0;"></i> Designed by | kazimhusaini |
+            2022
+        </h3>
+        <br>
+        <a href="https://twitter.com/ahbakri97" target="_blank">
+            <i id="twitter" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://dribbble.com/AHBakri" target="_blank">
+            <i id="dribbble" class="fab fa-dribbble"></i>
+        </a>
+        <a href="https://codepen.io/AHBakri" target="_blank">
+            <i id="codepen" class="fab fa-codepen"></i>
+        </a>
+    </div><!-- /#middle -->
+</body>
+
 </html>
